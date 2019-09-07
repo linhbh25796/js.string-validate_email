@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validate Email</title>
+</head>
+<body>
+<script>
+    function validate(str) {
+        var regexp = /^[A-Za-z0-9]+@[A-Za-z0-9]+\.[A-Za-z0-9]+$/;
+        if (regexp.test(str)) {
+            console.log("is email");
+            return true;
+        } else {
+            console.log("Retype for exactly.")
+            return false;
+        }
+    }
+
+    var mailIsTrue = "a@gmail.com";
+    var mailIsTrue1 = "ab@yahoo.com";
+    var mailIsTrue2 = "abc@hotmail.com";
+
+    var mailIsFalse = "@gmail.com";
+    var mailIsFalse1 = "ab@gmail.";
+    var mailIsFalse2 = "@#abc@gmail.com";
+
+    validate(mailIsTrue);
+    validate(mailIsTrue1);
+    validate(mailIsTrue2);
+    validate(mailIsFalse);
+    validate(mailIsFalse1);
+    validate(mailIsFalse2);
+
+
+</script>
+</body>
+</html>
